@@ -17,6 +17,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,8 +42,9 @@ set ts=4 sw=4 et
 
 let g:airline#extensions#tabline#enabled = 1
 
-nnoremap <Leader>t :NERDTree <CR>
+nnoremap <Leader>f :NERDTree <CR>
 nnoremap <Leader>p :CtrlP <CR>
+nnoremap <Leader>t :TagbarToggle <CR>
 nnoremap <Leader><Left> :bprevious <CR>
 nnoremap <Leader><Right> :bnext <CR>
 nnoremap <Leader>n :enew <CR>
