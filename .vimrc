@@ -39,6 +39,7 @@ syntax enable
 " colorscheme solarized
 set number
 set ts=4 sw=4 et
+set backspace=indent,eol,start
 
 let g:airline#extensions#tabline#enabled = 1
 
