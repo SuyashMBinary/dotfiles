@@ -21,7 +21,7 @@ filetype plugin indent on    " required
 
 syntax enable
 set background=dark
-colorscheme quantum
+" colorscheme quantum
 set number
 highlight LineNr ctermbg=0
 set ts=4 sw=4 et
