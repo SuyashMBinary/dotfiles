@@ -22,7 +22,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax enable
-colorscheme falcon
+" colorscheme falcon
 
 set background=dark
 set termguicolors
