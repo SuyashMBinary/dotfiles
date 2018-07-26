@@ -6,11 +6,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tyrannicaltoucan/vim-quantum'
+
 Plugin 'sheerun/vim-polyglot'
+Plugin 'fenetikm/falcon'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -20,15 +22,20 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax enable
+colorscheme falcon
+
 set background=dark
-" colorscheme quantum
+set termguicolors
 set number
-highlight LineNr ctermbg=0
 set ts=4 sw=4 et
 set backspace=indent,eol,start
+set autoindent
+" set spell spelllang=en_us
+" highlight LineNr ctermbg=0
 
+let g:falcon_airline = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='minimalist'
+let g:airline_theme='falcon'
 
 nnoremap <Leader>f :NERDTree <CR>
 nnoremap <Leader>p :CtrlP <CR>
