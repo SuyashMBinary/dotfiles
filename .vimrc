@@ -33,9 +33,9 @@ set autoindent
 " set spell spelllang=en_us
 " highlight LineNr ctermbg=0
 
-let g:falcon_airline = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='falcon'
+" let g:falcon_airline = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_theme='falcon'
 
 nnoremap <Leader>f :NERDTree <CR>
 nnoremap <Leader>p :CtrlP <CR>
