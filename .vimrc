@@ -34,7 +34,7 @@ set autoindent
 " highlight LineNr ctermbg=0
 
 " let g:falcon_airline = 1
-" let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 " let g:airline_theme='falcon'
 
 nnoremap <Leader>f :NERDTree <CR>
