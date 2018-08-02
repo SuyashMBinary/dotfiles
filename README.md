@@ -6,6 +6,7 @@ https://www.iterm2.com/
 
 ### iterm preferences
 Color Theme : https://github.com/tyrannicaltoucan/vim-quantum
+
 Font : 12pt Menlo
 
 ### Prompt
