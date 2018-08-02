@@ -2,4 +2,4 @@
 Collection of my dot files
 
 # iterm theme
-https://github.com/fenetikm/falcon
+https://github.com/tyrannicaltoucan/vim-quantum
