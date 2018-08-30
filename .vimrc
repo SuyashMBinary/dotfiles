@@ -8,10 +8,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'itchyny/lightline.vim'
-Plugin 'nightsense/snow'
+Plugin 'arcticicestudio/nord-vim'
 
 Plugin 'sheerun/vim-polyglot'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
@@ -25,8 +25,14 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax enable
-colorscheme snow
+colorscheme nord
+let g:nord_italic = 1
+let g:nord_underline = 1
+let g:nord_italic_comments = 1
+let g:nord_cursor_line_number_background = 1
 
+set t_Co=256
+set term=xterm-256color
 set background=dark
 set termguicolors
 set number
@@ -38,8 +44,9 @@ set autoindent
 
 set laststatus=2
 set noshowmode
+
 let g:lightline = {
-      \ 'colorscheme': 'snow_dark',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]

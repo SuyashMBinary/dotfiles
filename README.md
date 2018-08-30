@@ -5,9 +5,9 @@ Collection of my dot files
 https://www.iterm2.com/
 
 ### iterm preferences
-Color Theme : https://github.com/tyrannicaltoucan/vim-quantum
+Color Theme : https://github.com/arcticicestudio/nord
 
-Font : 12pt Menlo
+Font : 12pt Hack Nerd Font
 
 ### Prompt
 
