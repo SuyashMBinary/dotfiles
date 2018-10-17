@@ -25,6 +25,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax enable
+
 colorscheme nord
 let g:nord_italic = 1
 let g:nord_underline = 1
@@ -41,6 +42,10 @@ set backspace=indent,eol,start
 set autoindent
 " set spell spelllang=en_us
 " highlight LineNr ctermbg=0
+
+set undodir=~/.vim/undo//
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
 
 set laststatus=2
 set noshowmode
