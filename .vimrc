@@ -21,6 +21,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'arcticicestudio/nord-vim'
 
 Plugin 'sheerun/vim-polyglot'
+Plugin 'vim-syntastic/syntastic'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
@@ -77,7 +78,6 @@ let g:nord_underline = 1
 let g:nord_italic_comments = 1
 let g:nord_cursor_line_number_background = 1
 
-
 let g:lightline = {
       \ 'colorscheme': 'nord',
       \ 'active': {
@@ -88,6 +88,20 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+"""""""""""""""""""
+
+
+"""""""""""""""""""
+" Plugin Config
+"""""""""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 """""""""""""""""""
 
 
