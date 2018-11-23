@@ -21,8 +21,6 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'arcticicestudio/nord-vim'
 
 Plugin 'sheerun/vim-polyglot'
-Plugin 'vim-syntastic/syntastic'
-
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'jiangmiao/auto-pairs'
@@ -98,11 +96,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-"""""""""""""""""""
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+autocmd VimEnter * nested :call tagbar#autoopen(1)
+""""""""""""""""""
 
 
 """""""""""""""""""
