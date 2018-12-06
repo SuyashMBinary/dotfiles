@@ -6,6 +6,7 @@ https://www.iterm2.com/
 
 ### iterm preferences
 Color Theme : https://draculatheme.com/ 
+
 Font : 14pt Inconsolata Regular Font (https://github.com/hbin/top-programming-fonts/)
 
 ### Prompt
