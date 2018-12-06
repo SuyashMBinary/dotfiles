@@ -18,7 +18,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'itchyny/lightline.vim'
-Plugin 'dracula/vim'
+Plugin 'ayu-theme/ayu-vim'
 
 Plugin 'sheerun/vim-polyglot'
 
@@ -50,7 +50,6 @@ set laststatus=2
 set cursorline
 set t_Co=256
 set term=xterm-256color
-set background=dark
 set termguicolors
 set backspace=indent,eol,start
 set autoindent
@@ -72,14 +71,11 @@ set directory=~/.vim/swap//
 """""""""""""""""""
 " Theme Config
 """""""""""""""""""
-colorscheme dracula
-let g:nord_italic = 1
-let g:nord_underline = 1
-let g:nord_italic_comments = 1
-let g:nord_cursor_line_number_background = 1
+colorscheme ayu
+set background=dark
 
 let g:lightline = {
-      \ 'colorscheme': 'Dracula',
+      \ 'colorscheme': 'ayu',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
