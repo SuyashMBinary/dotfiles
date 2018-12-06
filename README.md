@@ -2,9 +2,9 @@
 Collection of my dot files
 
 # Theme : ayu
-https://github.com/ayu-theme/ayu-vim
-https://github.com/yarisgutierrez/ayu-lightline
-https://github.com/mbadolato/iTerm2-Color-Schemes
+* https://github.com/ayu-theme/ayu-vim
+* https://github.com/yarisgutierrez/ayu-lightline
+* https://github.com/mbadolato/iTerm2-Color-Schemes
 
 ### Terminal
 https://www.iterm2.com/
