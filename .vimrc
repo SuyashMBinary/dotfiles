@@ -71,8 +71,9 @@ set directory=~/.vim/swap//
 """""""""""""""""""
 " Theme Config
 """""""""""""""""""
-colorscheme ayu
+let ayucolor="dark" 
 set background=dark
+colorscheme ayu
 
 let g:lightline = {
       \ 'colorscheme': 'ayu',
