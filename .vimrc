@@ -18,7 +18,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'itchyny/lightline.vim'
-Plugin 'arcticicestudio/nord-vim'
+Plugin 'dracula/vim'
 
 Plugin 'sheerun/vim-polyglot'
 
@@ -39,6 +39,7 @@ filetype plugin indent on    " required
 " Interface
 """""""""""""""""""
 
+set mouse=a
 set number
 set ruler
 set tabstop=4
@@ -71,14 +72,14 @@ set directory=~/.vim/swap//
 """""""""""""""""""
 " Theme Config
 """""""""""""""""""
-colorscheme nord
+colorscheme dracula
 let g:nord_italic = 1
 let g:nord_underline = 1
 let g:nord_italic_comments = 1
 let g:nord_cursor_line_number_background = 1
 
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'Dracula',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -93,9 +94,9 @@ let g:lightline = {
 """""""""""""""""""
 " Plugin Config
 """""""""""""""""""
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-autocmd VimEnter * nested :call tagbar#autoopen(1)
+" autocmd VimEnter * NERDTree
+" autocmd VimEnter * wincmd p
+" autocmd VimEnter * nested :call tagbar#autoopen(1)
 """"""""""""""""""
 
 
