@@ -18,9 +18,13 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'itchyny/lightline.vim'
-Plugin 'ayu-theme/ayu-vim'
+Plugin 'joshdick/onedark.vim'
 
 Plugin 'sheerun/vim-polyglot'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
@@ -38,7 +42,6 @@ filetype plugin indent on    " required
 """"""""""""""""""" 
 " Interface
 """""""""""""""""""
-
 set mouse=a
 set number
 set ruler
@@ -54,6 +57,7 @@ set termguicolors
 set backspace=indent,eol,start
 set autoindent
 set noshowmode
+" set relativenumber
 " set spell spelllang=en_us
 " highlight LineNr ctermbg=0
 """""""""""""""""""
@@ -71,12 +75,11 @@ set directory=~/.vim/swap//
 """""""""""""""""""
 " Theme Config
 """""""""""""""""""
-let ayucolor="dark" 
 set background=dark
-colorscheme ayu
+colorscheme onedark
 
 let g:lightline = {
-      \ 'colorscheme': 'ayu',
+      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -95,7 +98,14 @@ let g:lightline = {
 " autocmd VimEnter * wincmd p
 " autocmd VimEnter * nested :call tagbar#autoopen(1)
 """"""""""""""""""
-
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+        \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
+        \ 'whitelist': ['rust'],
+        \ })
+endif
 
 """""""""""""""""""
 " Keyboard Mapping
@@ -105,3 +115,10 @@ nnoremap <Leader>p :CtrlP <CR>
 nnoremap <Leader>t :TagbarToggle <CR>
 nnoremap <Leader>n :tabnew <CR>
 nnoremap <Leader>l :set invnumber <CR>
+nnoremap <Leader>q :q!<CR>
+vnoremap <Leader>y "*y
+nnoremap <Leader><up> :tabr <CR>
+nnoremap <Leader><down> :tabl <CR>
+nnoremap <Leader><left> :tabp <CR>
+nnoremap <Leader><right> :tabn <CR>
+

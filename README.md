@@ -1,15 +1,14 @@
 # dotfiles
 Collection of my dot files
 
-# Theme : ayu
-* https://github.com/ayu-theme/ayu-vim
-* https://github.com/yarisgutierrez/ayu-lightline
+# Theme : One Dark
+* https://github.com/joshdick/onedark.vim 
 
 ### Terminal
 https://www.iterm2.com/
 
 ### Font
-Font : 12pt Menlo (https://github.com/hbin/top-programming-fonts/)
+Font : 14pt Menlo (https://github.com/hbin/top-programming-fonts/)
 
 ### Prompt
 
