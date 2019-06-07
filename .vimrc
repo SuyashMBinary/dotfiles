@@ -57,6 +57,7 @@ set termguicolors
 set backspace=indent,eol,start
 set autoindent
 set noshowmode
+set nomodeline
 " set relativenumber
 " set spell spelllang=en_us
 " highlight LineNr ctermbg=0
