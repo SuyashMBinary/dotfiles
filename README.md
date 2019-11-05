@@ -1,8 +1,16 @@
 # dotfiles
 Collection of my dot files
 
-# Theme : One Dark
-* https://github.com/joshdick/onedark.vim 
+# Theme : Nord
+* https://github.com/arcticicestudio/nord-vim
+
+# Terminal
+GNOME Terminal
+
+# Font
+Default Font on Ubuntu 18.04
+
+## Old Usage (Mac)
 
 ### Terminal
 https://www.iterm2.com/

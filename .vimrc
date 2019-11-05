@@ -18,7 +18,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'itchyny/lightline.vim'
-Plugin 'joshdick/onedark.vim'
+Plugin 'arcticicestudio/nord-vim'
 
 Plugin 'sheerun/vim-polyglot'
 Plugin 'prabirshrestha/asyncomplete.vim'
@@ -77,10 +77,10 @@ set directory=~/.vim/swap//
 " Theme Config
 """""""""""""""""""
 set background=dark
-colorscheme onedark
+colorscheme nord
 
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
