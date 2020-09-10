@@ -1,25 +1,20 @@
 # dotfiles
+
 Collection of my dot files
 
-# Theme : Nord
-* https://github.com/arcticicestudio/nord-vim
+## Theme
 
-# Terminal
-GNOME Terminal with Nord Theme
+* [Dracula](https://draculatheme.com/)
 
-# Font
-Default Font on Ubuntu 18.04
+## Terminal
 
-### Old Usage (Mac)
+* [iTerm2](https://iterm2.com/)
 
-#### Terminal
-https://www.iterm2.com/
+## Font
 
-#### Font
-Font : 14pt Menlo (https://github.com/hbin/top-programming-fonts/)
+* [Fira Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
 
-#### Prompt
+## Editor
 
-```
-export PS1='👻 \[\033[00;37m\][$(date +%H:%M)]\[\033[00m\] \[\033[00;33m\]\u\[\033[00m\] \[\033[00;34m\]\W\[\033[00m\]\[\033[00;35m\]$(__git_ps1 " (%s)")\[\033[00m\] 👉 '
-```
+* [Neovim](https://neovim.io/)
+
