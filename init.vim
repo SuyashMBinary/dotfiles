@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-    Plug 'dracula/vim'
+    Plug 'overcache/NeoSolarized'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'dart-lang/dart-vim-plugin'
     Plug 'liuchengxu/vista.vim'
@@ -16,7 +16,8 @@ if (has("termguicolors"))
  set termguicolors
 endif
 syntax enable
-colorscheme dracula
+colorscheme NeoSolarized
+"set background=dark
 set number
 filetype plugin indent on
 set tabstop=4

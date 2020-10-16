@@ -4,7 +4,7 @@ Collection of my dot files
 
 ## Theme
 
-* [Dracula](https://draculatheme.com/)
+* [Solarized](https://github.com/overcache/NeoSolarized)
 
 ## Terminal
 
