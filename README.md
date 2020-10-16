@@ -13,6 +13,7 @@ Collection of my dot files
 ## Font
 
 * [Fira Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
+* [Iosevka Nerd Font Mono](https://github.com/be5invis/Iosevka)
 
 ## Editor
 
