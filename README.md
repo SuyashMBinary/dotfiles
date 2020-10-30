@@ -4,15 +4,14 @@ Collection of my dot files
 
 ## Theme
 
-* [Solarized](https://github.com/overcache/NeoSolarized)
+* [GruvBox](https://github.com/morhetz/gruvbox)
 
 ## Terminal
 
-* [iTerm2](https://iterm2.com/)
+* [Alacritty](https://github.com/alacritty/alacritty)
 
 ## Font
 
-* [Fira Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
 * [Iosevka Nerd Font Mono](https://github.com/be5invis/Iosevka)
 
 ## Editor

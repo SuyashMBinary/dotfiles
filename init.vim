@@ -1,53 +1,37 @@
 call plug#begin('~/.vim/plugged')
-    Plug 'overcache/NeoSolarized'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'dart-lang/dart-vim-plugin'
-    Plug 'liuchengxu/vista.vim'
-    Plug 'scrooloose/nerdtree'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    Plug 'junegunn/fzf.vim'
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'dart-lang/dart-vim-plugin'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'morhetz/gruvbox'
+  Plug 'scrooloose/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'tpope/vim-fugitive'
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 if (has("termguicolors"))
  set termguicolors
 endif
 syntax enable
-colorscheme NeoSolarized
-"set background=dark
-set number
 filetype plugin indent on
-set tabstop=4
-set shiftwidth=4
+colorscheme gruvbox
+set background=dark
+set number
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 set copyindent
 set colorcolumn=80
-set hidden
-set cursorline
 set noswapfile
 set nobackup
-set showmatch
-
-" open new split panes to right and below
+set mouse=a
 set splitright
 set splitbelow
-
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-function! OpenTerminal()
-  split term://bash
-  resize 10
-endfunction
-
-let g:coc_global_extensions = [
-    \ 'coc-markdownlint',
-    \ 'coc-flutter',
-    \ 'coc-clangd'
-    \ ]
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
@@ -67,30 +51,26 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
-command! -nargs=0 Format :call CocAction('format')
-
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+let g:coc_global_extensions = [
+    \ 'coc-markdownlint',
+    \ 'coc-flutter',
+    \ 'coc-clangd',
+    \ 'coc-go',
+    \ ]
+
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>p :FZF<CR>
+nnoremap <leader>f :call CocAction('format')<cr>
+"autocmd FileType go nmap <leader>b  <Plug>(go-build)
+"autocmd FileType go nmap <leader>r  <Plug>(go-run)
 nnoremap <silent><nowait> <space>d  :<C-u>CocList diagnostics<cr>
 nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>
-nnoremap <C-p> :FZF<CR>
-nnoremap <c-n> :call OpenTerminal()<CR>
-nnoremap <silent> <C-m> :Vista coc<CR>
-" turn terminal to normal mode with escape
-tnoremap <Esc> <C-\><C-n>
-" use alt+hjkl to move between split/vsplit panels
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
+nnoremap <silent><nowait> <space>a  :<C-u>CocList actions<cr>
+nnoremap <silent><nowait> gd <Plug>(coc-definition)
+nnoremap <silent><nowait> gy <Plug>(coc-type-definition)
+nnoremap <silent><nowait> gi <Plug>(coc-implementation)
+nnoremap <silent><nowait> gr <Plug>(coc-references)
