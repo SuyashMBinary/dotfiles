@@ -8,7 +8,6 @@ export PATH=$PATH:$HOME/.dart/bin
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH":"$HOME/.nvim-osx64/bin"
 export PATH="$PATH":"$HOME/.clangd/bin/"
-export VCPKG_ROOT=/Users/suyash/Documents/Projects/git/vcpkg
 eval "$(starship init zsh)"
 alias l="lsd --color never --icon always -lah"
 alias dimgs="docker images --format \"table {{.Repository}}\\t{{.Tag}}\\t{{.Size}}\""
@@ -22,5 +21,6 @@ setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
 setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
