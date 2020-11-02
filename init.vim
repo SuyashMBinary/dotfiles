@@ -55,11 +55,11 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 let g:coc_global_extensions = [
-    \ 'coc-markdownlint',
-    \ 'coc-flutter',
-    \ 'coc-clangd',
-    \ 'coc-go',
-    \ ]
+  \ 'coc-markdownlint',
+  \ 'coc-flutter',
+  \ 'coc-clangd',
+  \ 'coc-go',
+  \ ]
 
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>p :FZF<CR>
@@ -70,7 +70,7 @@ nnoremap <silent><nowait> <space>d  :<C-u>CocList diagnostics<cr>
 nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <space>a  :<C-u>CocList actions<cr>
-nnoremap <silent><nowait> gd <Plug>(coc-definition)
-nnoremap <silent><nowait> gy <Plug>(coc-type-definition)
-nnoremap <silent><nowait> gi <Plug>(coc-implementation)
-nnoremap <silent><nowait> gr <Plug>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
